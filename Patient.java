@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 public class Patient {
+
 	private String name;
 	private int age;
 	private String surname;
@@ -10,6 +11,8 @@ public class Patient {
 	private String email;
 	private String amka;
 	private static int  count=0;
+
+	//Declaration of the list with the positive patients' information//
     public static ArrayList<Patient> cases = new ArrayList<Patient>();
 
 
@@ -36,7 +39,7 @@ public class Patient {
 	}
 
 
-
+    //Print Patients' List//
 	public static void p() {
 		for (int i=0; i<cases.size(); i++) {
 			System.out.println(cases.get(i));

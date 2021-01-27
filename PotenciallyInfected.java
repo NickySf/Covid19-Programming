@@ -10,12 +10,10 @@ public class PotenciallyInfected {
 	private String amka;
 	private static int count= 0;
 
-
+    //Declaration of the list with the patients' contacts//
 	public static ArrayList <PotenciallyInfected> cases = new ArrayList <PotenciallyInfected>();
 
 	public PotenciallyInfected(String name, String surname,int age, String gender, String phone, String email, String amka) {
-
-
 		this.name = name;
 		this.surname = surname;
 		this.age = age;
@@ -25,11 +23,9 @@ public class PotenciallyInfected {
 		this.amka = amka;
 		count++;
 		cases.add(this);
-
-
 	}
 
-
+    //Print of the potencially infected list//
     public static void res() {
 		for (int i = 0; i<cases.size(); i++) {
 			System.out.println(cases.get(i));
@@ -43,6 +39,7 @@ public class PotenciallyInfected {
 				+ ", phone=" + phone + ", email=" + email + ", amka=" + amka + "]";
 	}
 
+	//Search of the new patient in the potencially infected list and delete them if they exist//
 	public static void delete(String amka) {
 		int x = -1;
 		x = cases.indexOf(amka);
@@ -50,10 +47,4 @@ public class PotenciallyInfected {
 			cases.remove(x);
 		}
 	}
-
-
-
-
-
 }
-
