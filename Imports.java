@@ -1,5 +1,3 @@
-package ESPINN;
-
 /*Calling of the class Graphics,
 in order for the user to insert data*/
 
