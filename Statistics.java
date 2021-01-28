@@ -7,10 +7,10 @@ public class Statistics {
 	//Table with the percentage of the positive patients per area//
 	public static double[] percentagePerArea = new double [11];
 	Converts ob = new Converts();
-	public static String [] areas = new String [11] ;
-
+	public static String [] areas = new String [11];
+	
 	public void fillArea() {
-		for (int x=0; x<11; x++ ) {
+		for (int x = 0; x < 11; x++) {
 			switch (x+1) {
 	        case 1:
 	        	areas[x] = "Attiki";
@@ -51,7 +51,7 @@ public class Statistics {
 
 	//Print positive patients per area//
 	public void printPatientsPerArea() {
-		for (int i=0; i<11; i++) {
+		for (int i = 0; i < 11; i++) {
 			System.out.println(areas[i] + ": " + ob.patientsPerArea[i] + "patients");
 		}
 		System.out.println(" ");
@@ -61,7 +61,7 @@ public class Statistics {
 	//Calculation of the total patients in Greece//
 	public int totalPatients() {
 		int S = 0;
-		for (int i=0; i<11; i++) {
+		for (int i = 0; i < 11; i++) {
 			S += ob.patientsPerArea[i];
 		}
 		return S;
@@ -70,7 +70,7 @@ public class Statistics {
 	//Print positive patients' percentage per area according to the total patients//
 	public void statsPerArea() {
 		System.out.println("Area's patients per total patients : ");
-		for (int i=0; i<11; i++) {
+		for (int i = 0; i < 11; i++) {
 			percentagePerArea[i] = ob.patientsPerArea[i] / totalPatients() * 100;
 			System.out.println(areas[i] + ": "+ percentagePerArea[i] + "%");
 		}
@@ -81,7 +81,7 @@ public class Statistics {
     //Print positive patients' percentage per area according to the area's population//
     public void stats2PerArea() {
     	System.out.println("Patiens per area's population:");
-    	for (int i=0; i<11; i++) {
+    	for (int i = 0; i < 11; i++) {
     		percentage2PerArea[i] = ob.patientsPerArea[i]/population[i]*100;
     		System.out.println(areas[i] + ": " + percentage2PerArea[i] + " %");
 

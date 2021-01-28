@@ -1,62 +1,68 @@
-/*Calling of the class Graphics,
- in order for the user to insert data*/
+package ESPINN;
 
+/*Calling of the class Graphics,
+in order for the user to insert data*/
 
 import java.util.Scanner;
 
 public class Imports {
-
 	Scanner input = new Scanner(System.in);
-    Converts obj = new Converts();
+	Converts obj = new Converts();
 
-    //Test Result//
+	// Test Result//
 	public String testResult() {
-	 try {
-		int tr = Graphics.result();
-		while ( tr != 1 && tr != 2) {
-			tr = Graphics.result();
+		try {
+			int tr = Graphics.result();
+			while (tr != 1 && tr != 2) {
+				tr = Graphics.result();
+			}
+			String test_result = obj.convertResults(tr);
+			return test_result;
+		} catch (NumberFormatException e) {
+			System.out.println("\nInvalid Input");
+			System.out.println("Please try again:\n");
+			int tr = Graphics.result();
+			while (tr != 1 && tr != 2) {
+				tr = Graphics.result();
+			}
+			String test_result = obj.convertResults(tr);
+			return test_result;
 		}
-		String test_result = obj.convertResults(tr);
-		return test_result;
-	}catch(NumberFormatException e) {
-		System.out.println("\nInvalid Input");
-		System.out.println("Please try again:\n");
-		int tr = Graphics.result();
-		while ( tr != 1 && tr != 2) {
-			tr = Graphics.result();
-		}
-		String test_result = obj.convertResults(tr);
-		return test_result;
-	}
 
 	}
 
-   //Name //
+	// Name//
 	public String theName() {
 		String mess = "Please enter the name";
 		String name = Graphics.imports2(mess);
 		return name;
 	}
 
-    //Surname//
+	// Surname//
 	public String theSurname() {
-		String mess="Please enter the surname";
+		String mess = "Please enter the surname";
 		String surname = Graphics.imports2(mess);
 		return surname;
 	}
 
-    //Age//
+	// Age//
 	public int theAge() {
-		String mess="Please enter the Age";;
-		int age = Graphics.imports1(mess);
-		return age;
+		String mess = "Please enter the Age";
+		;
+		try {
+			int age = Graphics.imports1(mess);
+			return age;
+		} catch (NumberFormatException e) {
+			int age = Graphics.imports1(mess);
+			return age;
+		}
 	}
 
-    //Gender//
+	// Gender//
 	public String theGender() {
 
 		int gender = Graphics.gender();
-		while ( gender != 1 && gender != 2 && gender !=3) {
+		while (gender != 1 && gender != 2 && gender != 3) {
 			System.out.println("Wrong answer, please try again");
 			gender = Graphics.gender();
 		}
@@ -64,58 +70,57 @@ public class Imports {
 		return g;
 	}
 
-
-	//Date//
+	// Date//
 	public String theDate() {
-		String mess= "Please enter the Date";
-		String date =Graphics.imports2(mess) ;
+		String mess = "Please enter the Date";
+		String date = Graphics.imports2(mess);
 		return date;
 	}
 
-    //Email//
+	// Email//
 	public String theEmail() {
-		String mess= "Please enter the Email";
+		String mess = "Please enter the Email";
 		String email = Graphics.imports2(mess);
 		return email;
 	}
 
-    //Phone//
+	// Phone//
 	public String thePhoneNumber() {
-		String mess= "Please enter the phone number";;
+		String mess = "Please enter the phone number";
+		;
 		String phone_number = Graphics.imports2(mess);
 		return phone_number;
 
 	}
 
-
-    //Area//
+	// Area//
 	public String theArea() {
 		try {
-	    int a = Graphics.menou();
-	    while(a<1 || a>11) {
-	    	 a = Graphics.menou();
-	    }
-	    String area = obj.convertArea(a);
-		return area;
-		} catch(NumberFormatException e) {
-			int a= Graphics.menou();
-			while(a<1 ||a>11) {
-				 a = Graphics.menou();
+			int a = Graphics.menu();
+			while (a < 1 || a > 11) {
+				a = Graphics.menu();
+			}
+			String area = obj.convertArea(a);
+			return area;
+		} catch (NumberFormatException e) {
+			int a = Graphics.menu();
+			while (a < 1 || a > 11) {
+				a = Graphics.menu();
 			}
 			String area = obj.convertArea(a);
 			return area;
 
 		}
-	  }
+	}
 
-	//AMKA//
+	// Amka//
 	public String theAmka() {
-		String mess= "Please enter the AMKA";
+		String mess = "Please enter the AMKA";
 		String amka = Graphics.imports2(mess);
 		return amka;
 	}
 
-	//Statistics Information//
+	// Statistics Information//
 	public int theStatistics() {
 		int reply = Graphics.theStatistics();
 		while (reply != 1 && reply != 2) {
