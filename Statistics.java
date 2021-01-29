@@ -1,4 +1,8 @@
-
+/**
+ * *This class calculates the statistics about
+ * the Covid19 patients for each area
+ *
+ */
 
 public class Statistics {
 
@@ -10,7 +14,9 @@ public class Statistics {
   public static double[] percentagePerArea = new double [11];
   Converts ob = new Converts();
   public static String [] areas = new String [11];
-
+  /** This method fills the areas' table
+  * with their names
+  */
   public void fillArea() {
     for (int x = 0; x < 11; x++) {
       switch (x + 1) {
@@ -52,6 +58,9 @@ public class Statistics {
   }
 
   //Print positive patients per area//
+  /** This method
+  * Prints positive patients per area
+  */
   public void printPatientsPerArea() {
     for (int i = 0; i < 11; i++) {
       System.out.println(areas[i] + ": " + ob.patientsPerArea[i] + "patients");
@@ -61,6 +70,11 @@ public class Statistics {
   }
 
   //Calculation of the total patients in Greece//
+  /** This method
+  * Sums the total  patients in Greece
+  * @return the total number of patients
+  */
+
   public int totalPatients() {
     int S = 0;
     for (int i = 0; i < 11; i++) {
@@ -70,6 +84,12 @@ public class Statistics {
   }
 
   //Print positive patients' percentage per area according to the total patients//
+
+    /**This method Prints
+     *  the  positive patients' percentage
+     *  per area according to the total patients
+     */
+
   public void statsPerArea() {
     System.out.println("Area's patients per total patients : ");
     for (int i = 0; i < 11; i++) {
@@ -81,6 +101,10 @@ public class Statistics {
   }
 
   //Print positive patients' percentage per area according to the area's population//
+    /**This method Prints positive patients'
+     *  percentage per area according
+     *  to the area's population
+     */
   public void stats2PerArea() {
     System.out.println("Patiens per area's population:");
     for (int i = 0; i < 11; i++) {
