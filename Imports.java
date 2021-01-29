@@ -1,13 +1,20 @@
-/*Calling of the class Graphics,
-in order for the user to insert data*/
-
 import java.util.Scanner;
+/** This class calls the class Graphics
+ * for every information we want the user to insert,
+ * giving as parameter the message we want to
+ * print to the user
+ * and the class Converts for every information
+ * we need in a converted form
+ */
 
 public class Imports {
   Scanner input = new Scanner(System.in);
   Converts obj = new Converts();
 
-  // Test Result//
+
+  /**Gets the Test Result
+  * @return if the result was positive or negative
+  */
   public String testResult() {
     try {
       int tr = Graphics.result();
@@ -28,21 +35,26 @@ public class Imports {
     }
   }
 
-  // Name//
+
+     /**Gets the name
+      * @return name
+    */
   public String theName() {
     String mess = "Please enter the name";
     String name = Graphics.imports2(mess);
     return name;
   }
-
-  // Surname//
+    /** Gets surname
+     * @return surname
+     */
   public String theSurname() {
     String mess = "Please enter the surname";
     String surname = Graphics.imports2(mess);
     return surname;
   }
-
-  // Age//
+    /**Gets age
+     * @return age
+     */
   public int theAge() {
     String mess = "Please enter the Age";
     try {
@@ -54,7 +66,9 @@ public class Imports {
     }
   }
 
-  // Gender//
+  /** gender
+  * @return gender
+  */
   public String theGender() {
     int gender = Graphics.gender();
     while (gender != 1 && gender != 2 && gender != 3) {
@@ -64,29 +78,33 @@ public class Imports {
     String g = obj.convertGender(gender);
     return g;
   }
-
-  // Date//
+    /** Gets date
+     * @return date
+     */
   public String theDate() {
     String mess = "Please enter the Date";
     String date = Graphics.imports2(mess);
     return date;
   }
-
-  // Email//
+    /** Gets Email
+     * @return email
+     */
   public String theEmail() {
     String mess = "Please enter the Email";
     String email = Graphics.imports2(mess);
     return email;
   }
-
-  // Phone//
+    /** Gets phone
+     * @return phone
+     */
   public String thePhoneNumber() {
     String mess = "Please enter the phone number";
     String phone_number = Graphics.imports2(mess);
     return phone_number;
   }
-
-  // Area//
+    /** Gets area
+     * @return area
+     */
   public String theArea() {
     try {
       int a = Graphics.menu();
@@ -105,14 +123,17 @@ public class Imports {
     }
   }
 
-  // Amka//
+    /** Gets amka
+     * @return amka
+     */
   public String theAmka() {
     String mess = "Please enter the AMKA";
     String amka = Graphics.imports2(mess);
     return amka;
   }
-
-  // Statistics Information//
+    /** Asks if the user wants statistics
+     * @return the reply
+     */
   public int theStatistics() {
     int reply = Graphics.theStatistics();
     while (reply != 1 && reply != 2) {
