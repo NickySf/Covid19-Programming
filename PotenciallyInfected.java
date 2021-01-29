@@ -56,7 +56,7 @@ public class PotenciallyInfected {
       /**This method Searches the new patient
        * in the potencially infected list
        * and delete them if they exist//
-       * @param amka
+       * @param amka the contact's amka
      */
   public static void delete(String amka) {
     int x = -1;
