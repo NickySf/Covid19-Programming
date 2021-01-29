@@ -1,9 +1,19 @@
 //Conversion of the data the user insert, to the word they represent//
+/** This class converts the data the user inserts,
+ * to the word they represent
+ */
 public class Converts {
 
   public static int[] patientsPerArea = new int [11];
 
   //Gender convert//
+
+	 /**This methd converts the gender
+	   *
+	   * @param x gender's number
+	   * @return the gender
+	   */
+
   public String convertGender(int x) {
     String reply = "";
     switch (x) {
@@ -21,6 +31,11 @@ public class Converts {
   }
 
   //Test Result Conversion//
+	 /**This method converts the test result
+	   *
+	   * @param x result's number
+	   * @return the result
+	   */
   public String convertResults(int x) {
 
     String reply = " ";
@@ -36,6 +51,11 @@ public class Converts {
   }
 
   //Area Conversion//
+	/**This methd converts the area
+	   *
+	   * @param x area's number
+	   * @return the area
+	   */
   public String convertArea(int x) {
     patientsPerArea[x - 1]++;
     String reply = "";
