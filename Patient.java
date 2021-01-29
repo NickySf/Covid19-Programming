@@ -1,5 +1,6 @@
 import java.util.ArrayList;
-
+/** This class is about the patients.
+ */
 public class Patient {
   private String name;
   private int age;
@@ -13,7 +14,17 @@ public class Patient {
 
   //Declaration of the list with the positive patients' information//
   public static ArrayList<Patient> cases = new ArrayList<Patient>();
-
+   /** Constructor for the object
+    * of the patients
+    * @param name patient's name
+    * @param surname patient's surname
+    * @param age patient's age
+    * @param gender patient's gender
+    * @param date date the test was taken
+    * @param phone patient's phone number
+    * @param email patient's email
+    * @param amka patient's amka
+    */
 
   public Patient(String name, String surname, int age, String gender, String date,
       String phone, String email, String amka) {
@@ -31,6 +42,8 @@ public class Patient {
 
 
   @Override
+  /**Typical toString method
+  */
   public String toString() {
     return "Patient [name=" + name + ", age=" + age + ", surname="
         + surname + ", gender=" + gender + ", phone="
@@ -39,6 +52,9 @@ public class Patient {
 
 
   //Print Patients' List//
+      /** This method prints
+       * the patient's list
+     */
   public static void p() {
     for (int i = 0; i < cases.size(); i++) {
       System.out.println(cases.get(i));
