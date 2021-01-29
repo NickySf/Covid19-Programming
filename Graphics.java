@@ -2,10 +2,11 @@ import java.awt.BorderLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-
+/** This class creates Graphics.
+ */
 public class Graphics {
-
-  //Welcoming Window
+    /**This method show the welcoming window.
+     */
   public static void eisagwgh() {
     JFrame wi = new JFrame("Entry");
     wi.setBounds(0, 0, 800, 600);
@@ -13,8 +14,8 @@ public class Graphics {
     wi.add(new JButton("Welcome to the webpage"), BorderLayout.CENTER);
     wi.setVisible(true);
   }
-
-  //closing window
+    /**This method show the closing window.
+     */
   public static void telos() {
     JFrame wi = new JFrame("Exit");
     wi.setBounds(0, 0, 800, 600);
@@ -22,8 +23,10 @@ public class Graphics {
     wi.add(new JButton("Thankyou for the data!"), BorderLayout.CENTER);
     wi.setVisible(true);
   }
-
-  //Message print and Data insert(int) window
+    /** Thismethod shows the  Data insert(int) window.
+     * @param message for the user
+     * @return number of the answer
+     */
   public static int imports1(String message) {
     String number = JOptionPane.showInputDialog(message);
     try {
@@ -35,14 +38,17 @@ public class Graphics {
       return ar;
     }
   }
-
-  //Message print and Data insert(String) window//
+    /** This method shows the  Data insert(String) window
+     * @param message for the user
+     * @return number of the answer
+     */
   public static String imports2(String message) {
     String number = JOptionPane.showInputDialog(message);
     return number;
   }
-
-  //Window for area selection
+    /**This method print the area menu window
+     * @return the number of the area
+     */
   public static int menu() {
     String num = JOptionPane.showInputDialog("Please enter your area number\n"
         + "1.Attiki\n"
@@ -59,8 +65,10 @@ public class Graphics {
     int ar = Integer.parseInt(num);
     return ar;
   }
-
-  //Window for test result selection//
+    /** This method show the window
+     * for the test's result selection
+     * @return the number of the result
+     */
   public static int result() {
     String num = JOptionPane.showInputDialog("Please enter the result of the test\n"
         + "1.Positive\n"
@@ -68,8 +76,10 @@ public class Graphics {
     int ar = Integer.parseInt(num);
     return ar;
   }
-
-  //Window for gender selection//
+    /** Shows the Window for gender
+     * selection
+     * @return the gender's number
+     */
   public static int gender() {
     try {
       String num = JOptionPane.showInputDialog("Please enter the gender's number\n"
@@ -87,8 +97,10 @@ public class Graphics {
       return ar;
     }
   }
-
-  //Window for the statistics' print selection//
+    /** Shows the Window for
+     * the statistics' print selection
+     * @return the reply
+     */
   public static int theStatistics() {
     try {
       String num = JOptionPane.showInputDialog("Do you want the statistics? \n"
@@ -104,8 +116,10 @@ public class Graphics {
       return ar;
     }
   }
-
-  //Window for the continuing of the procedure selection//
+    /**Shows the Window for
+     *  the continuing of the procedure selection//
+     * @return the reply's number
+     */
   public static int term() {
     try {
       String num = JOptionPane.showInputDialog("Do you want to continue the procedure? \n"
